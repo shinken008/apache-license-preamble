@@ -1,4 +1,4 @@
-## alp
+## apachelp
 Insert the Apache license preamble into the file. Inspired by [echarts](https://github.com/apache/echarts).
 
 ## install
@@ -10,7 +10,7 @@ npm install minimist
 ## usage
 cli
 ```sh
-alp --org [apache] --verbose --path [file|directory]
+apachelp --org [apache] --verbose --path [file|directory]
 ```
 
 ## args

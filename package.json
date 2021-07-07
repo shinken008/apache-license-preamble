@@ -1,12 +1,12 @@
 {
-  "name": "alp",
+  "name": "apachelp",
   "version": "0.1.0",
   "author": "shinken00@gmail.com",
   "license": "MIT",
   "description": "Insert apache license preamble to file.",
   "main": "src/addHeader.js",
   "bin": {
-    "alp": "bin/alp"
+    "apachelp": "bin/apachelp"
   },
   "scripts": {
     "start": "node ./src/addHeader.js --verbose --org Organization --path test",
