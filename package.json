@@ -1,0 +1,20 @@
+{
+  "name": "alp",
+  "version": "0.1.0",
+  "author": "shinken00@gmail.com",
+  "license": "MIT",
+  "description": "Insert apache license preamble to file.",
+  "main": "src/addHeader.js",
+  "bin": {
+    "alp": "bin/alp"
+  },
+  "scripts": {
+    "start": "node ./src/addHeader.js --verbose --org Organization --path test",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "minimist": "^1.2.5"
+  },
+  "devDependencies": {}
+}
