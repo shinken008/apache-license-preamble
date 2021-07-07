@@ -1,8 +1,9 @@
 {
   "name": "apachelp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "shinken00@gmail.com",
   "license": "MIT",
+  "keywords": ["apache license", "preamble", "apache"],
   "description": "Insert apache license preamble to file.",
   "main": "src/addHeader.js",
   "files": [

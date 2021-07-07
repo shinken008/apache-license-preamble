@@ -6,6 +6,10 @@ With [npm](https://npmjs.org/) do:
 ```sh
 npm install minimist
 ```
+or yarn:
+```sh
+yarn minimist
+```
 
 ## usage
 cli
@@ -15,14 +19,18 @@ apachelp --org [apache] --verbose --path [file|directory]
 
 ## args
 - org
+
 Assign organization.
 For Example: `Licensed to the [org] under one...`
 
 - verbose
+
 The pass file output terminal.
 
 - path
+
 Assign file or directory files for insert the Apache license preamble.
 
 - ignore
+
 Read `process.cwd()` assign ignore file, default file is `.headerignore`.
