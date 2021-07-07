@@ -1,6 +1,4 @@
 # Only support regexp, testing against each relative file path
-# based on the echart base directory. And the pattern should
-# match the relative path completely.
 
 node_modules
 .*\.git

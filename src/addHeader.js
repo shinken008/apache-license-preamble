@@ -5,36 +5,9 @@ const preamble = require('./preamble')
 const args = require('./args')
 
 // In the `.headerignore`, each line is a pattern in RegExp.
-// all relative path (based on the echarts base directory) is tested.
-// The pattern should match the relative path completely.
 
 const excludesPath = path.join(__dirname, '../.headerignore')
 const excludesCustomPath = path.join(process.cwd(), args.ignore || '.headerignore')
-
-// const lists = [
-//     '../src/**/*.js',
-//     '../build/*.js',
-//     '../benchmark/src/*.js',
-//     '../benchmark/src/gulpfile.js',
-//     '../extension-src/**/*.js',
-//     '../extension/**/*.js',
-//     '../map/js/**/*.js',
-//     '../test/build/**/*.js',
-//     '../test/node/**/*.js',
-//     '../test/ut/core/*.js',
-//     '../test/ut/spe/*.js',
-//     '../test/ut/ut.js',
-//     '../test/*.js',
-//     '../theme/*.js',
-//     '../theme/tool/**/*.js',
-//     '../echarts.all.js',
-//     '../echarts.blank.js',
-//     '../echarts.common.js',
-//     '../echarts.simple.js',
-//     '../index.js',
-//     '../index.common.js',
-//     '../index.simple.js'
-// ];
 
 function run () {
   const updatedFiles = []
