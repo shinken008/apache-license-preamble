@@ -8,9 +8,8 @@ const args = require('./args')
 // all relative path (based on the echarts base directory) is tested.
 // The pattern should match the relative path completely.
 
-// TODO: 合并 ignore 文件
 const excludesPath = path.join(__dirname, '../.headerignore')
-const excludesCustomPath = path.resolve(process.cwd(), args.ignore || '.headerignore')
+const excludesCustomPath = path.join(process.cwd(), args.ignore || '.headerignore')
 
 // const lists = [
 //     '../src/**/*.js',
@@ -135,18 +134,18 @@ function eachFile (visit) {
   function prepareExcludePatterns () {
     const content = fs.readFileSync(excludesPath, { encoding: 'utf-8' })
     content.replace(/\r/g, '\n').split('\n').forEach(function (line) {
-      line = line.trim()
+      line = line.trim().toLocaleLowerCase()
       if (line && line.charAt(0) !== '#') {
         excludePatterns.push(new RegExp(line))
       }
     })
 
     let customContent = ''
-    if (excludesCustomPath) {
+    if (fs.existsSync(excludesCustomPath)) {
       customContent = fs.readFileSync(excludesCustomPath, { encoding: 'utf-8' })
     }
     customContent.replace(/\r/g, '\n').split('\n').forEach(function (line) {
-      line = line.trim()
+      line = line.trim().toLocaleLowerCase()
       if (line && line.charAt(0) !== '#') {
         excludePatterns.push(new RegExp(line))
       }

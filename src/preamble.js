@@ -1,7 +1,6 @@
 const args = require('./args')
 
-const cStyleComment = `
-/*
+const cStyleComment = `/*
 * Licensed to the ${args.org} under one
 * or more contributor license agreements.  See the NOTICE file
 * distributed with this work for additional information
@@ -22,8 +21,7 @@ const cStyleComment = `
 
 `
 
-const hashComment = `
-# Licensed to the ${args.org} under one
+const hashComment = `# Licensed to the ${args.org} under one
 # or more contributor license agreements.  See the NOTICE file
 # distributed with this work for additional information
 # regarding copyright ownership.  The ASF licenses this file
@@ -42,8 +40,7 @@ const hashComment = `
 
 `
 
-const mlComment = `
-<!--
+const mlComment = `<!--
 Licensed to the ${args.org} under one
 or more contributor license agreements.  See the NOTICE file
 distributed with this work for additional information

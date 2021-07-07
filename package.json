@@ -5,12 +5,20 @@
   "license": "MIT",
   "description": "Insert apache license preamble to file.",
   "main": "src/addHeader.js",
+  "files": [
+    "bin",
+    "src",
+    ".headerignore"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinken008/apache-license-preamble.git"
+  },
   "bin": {
     "apachelp": "bin/apachelp"
   },
   "scripts": {
-    "start": "node ./src/addHeader.js --verbose --org Organization --path test",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./src/addHeader.js --verbose --org Organization --path test"
   },
   "dependencies": {
     "chalk": "^4.1.1",

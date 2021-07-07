@@ -25,4 +25,4 @@ The pass file output terminal.
 Assign file or directory files for insert the Apache license preamble.
 
 - ignore
-Read `process.cwd()` ignore file, default file is `.headerignore`.
+Read `process.cwd()` assign ignore file, default file is `.headerignore`.
