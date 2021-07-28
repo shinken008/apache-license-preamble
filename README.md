@@ -4,11 +4,11 @@ Insert the Apache license preamble into the file. Inspired by [echarts](https://
 ## install
 With [npm](https://npmjs.org/) do:
 ```sh
-npm install minimist
+npm install apachelp -D
 ```
 or yarn:
 ```sh
-yarn minimist
+yarn add apachelp -D
 ```
 
 ## usage
