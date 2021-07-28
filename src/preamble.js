@@ -79,11 +79,35 @@ const addFns = {
     return headStr + fileStr
   },
 
+  tsx: function (headStr, fileStr) {
+    return headStr + fileStr
+  },
+
   js: function (headStr, fileStr) {
     return headStr + fileStr
   },
 
+  jsx: function (headStr, fileStr) {
+    return headStr + fileStr
+  },
+
   css: function (headStr, fileStr) {
+    return headStr + fileStr
+  },
+
+  scss: function (headStr, fileStr) {
+    return headStr + fileStr
+  },
+
+  less: function (headStr, fileStr) {
+    return headStr + fileStr
+  },
+
+  styl: function (headStr, fileStr) {
+    return headStr + fileStr
+  },
+
+  wxss: function (headStr, fileStr) {
     return headStr + fileStr
   },
 
@@ -109,7 +133,13 @@ const addFns = {
 
   xml: xmlAddFn,
 
-  xsl: xmlAddFn
+  xsl: xmlAddFn,
+
+  vue: xmlAddFn,
+
+  wxml: xmlAddFn,
+
+  ux: xmlAddFn,
 }
 
 function addShellLikeHeader (headStr, fileStr) {
@@ -136,15 +166,24 @@ function xmlAddFn (headStr, fileStr) {
 
 const preambleMap = {
   ts: cStyleComment,
+  tsx: cStyleComment,
   js: cStyleComment,
+  jsx: cStyleComment,
   css: cStyleComment,
+  scss: cStyleComment,
+  less: cStyleComment,
+  styl: cStyleComment,
+  wxss: cStyleComment,
   java: cStyleComment,
   yml: hashComment,
   yaml: hashComment,
   sh: hashComment,
   html: mlComment,
   xml: mlComment,
-  xsl: mlComment
+  xsl: mlComment,
+  vue: mlComment,
+  wxml: mlComment,
+  ux: mlComment,
 }
 
 const licenseReg = [
@@ -175,15 +214,24 @@ const hashCommentReg = /^\s*#.*$/gm
 const mlCommentReg = /<\!\-\-[\S\s]*?\-\->/
 const commentReg = {
   ts: cStyleCommentReg,
+  tsx: cStyleCommentReg,
   js: cStyleCommentReg,
+  jsx: cStyleCommentReg,
   css: cStyleCommentReg,
+  scss: cStyleCommentReg,
+  less: cStyleCommentReg,
+  styl: cStyleCommentReg,
+  wxss: cStyleCommentReg,
   java: cStyleCommentReg,
   yml: hashCommentReg,
   yaml: hashCommentReg,
   sh: hashCommentReg,
   html: mlCommentReg,
   xml: mlCommentReg,
-  xsl: mlCommentReg
+  xsl: mlCommentReg,
+  vue: mlCommentReg,
+  wxml: mlCommentReg,
+  ux: mlCommentReg,
 }
 
 function extractComment (str, fileExt) {
