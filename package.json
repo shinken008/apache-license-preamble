@@ -19,7 +19,7 @@
     "apachelp": "bin/apachelp"
   },
   "scripts": {
-    "test": "node ./src/addHeader.js --verbose --org Organization --path test"
+    "test": "node ./src/addHeader.js --verbose --org Organization --path test/.js"
   },
   "dependencies": {
     "chalk": "^4.1.1",

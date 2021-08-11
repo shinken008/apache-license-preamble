@@ -237,7 +237,7 @@ const commentReg = {
 function extractComment (str, fileExt) {
   const reg = commentReg[fileExt]
 
-  if (!fileExt || !reg || !str) {
+  if (!fileExt || !reg || !str || !str.includes(`Licensed to the ${args.org}`)) {
     return
   }
 
