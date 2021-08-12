@@ -5,7 +5,7 @@ Insert the Apache license preamble into the file. Inspired by [echarts](https://
 With [npm](https://npmjs.org/) do:
 ```sh
 npm install apachelp -D
-```
+``` 
 or yarn:
 ```sh
 yarn add apachelp -D
