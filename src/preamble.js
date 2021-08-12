@@ -165,8 +165,9 @@ function xmlAddFn (headStr, fileStr) {
 }
 
 const preambleMap = {
-  ts: cStyleComment,
-  tsx: cStyleComment,
+  // https://stackoverflow.com/questions/12758657/typescript-compile-and-keep-comments
+  ts: cStyleComment.replace('\n', '!\n'),
+  tsx: cStyleComment.replace('\n', '!\n'),
   js: cStyleComment,
   jsx: cStyleComment,
   css: cStyleComment,
