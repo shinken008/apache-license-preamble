@@ -123,7 +123,7 @@ const addFns = {
 
   html: function (headStr, fileStr) {
     // Git diff enables manual check.
-    let resultStr = fileStr.replace(/^\s*<!DOCTYPE\s[^<>]+>/i, '$&' + headStr)
+    let resultStr = fileStr.replace(/^\s*<!DOCTYPE\s[^<>]+>/i, '$&\n' + headStr)
     // If no doctype
     if (resultStr.length === fileStr.length) {
       resultStr = headStr + fileStr
@@ -165,9 +165,8 @@ function xmlAddFn (headStr, fileStr) {
 }
 
 const preambleMap = {
-  // https://stackoverflow.com/questions/12758657/typescript-compile-and-keep-comments
-  ts: cStyleComment.replace('\n', '!\n'),
-  tsx: cStyleComment.replace('\n', '!\n'),
+  ts: cStyleComment,
+  tsx: cStyleComment,
   js: cStyleComment,
   jsx: cStyleComment,
   css: cStyleComment,

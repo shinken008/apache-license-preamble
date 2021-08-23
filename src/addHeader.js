@@ -13,6 +13,7 @@ function run () {
   const updatedFiles = []
   const passFiles = []
   const pendingFiles = []
+  const emptyFiles = []
 
   eachFile(function (absolutePath, fileExt) {
     const fileStr = fs.readFileSync(absolutePath, 'utf-8')
@@ -32,8 +33,10 @@ function run () {
     const result = preamble.addPreamble(fileStr, fileExt)
     if (result) {
       fs.writeFileSync(absolutePath, result, 'utf-8')
+      updatedFiles.push(absolutePath)
+    } else {
+      emptyFiles.push(absolutePath)
     }
-    updatedFiles.push(absolutePath)
   })
 
   console.log('\n')
@@ -57,7 +60,31 @@ function run () {
   console.log(' License added for: ')
   console.log('--------------------')
   if (updatedFiles.length) {
-    updatedFiles.forEach(function (path) {
+    if (args.nosilent) {
+      console.log('\n--------------------')
+      console.log(chalk.red('No license header file exists: '))
+      console.log('--------------------')
+      updatedFiles.forEach(function (path) {
+        console.log(chalk.red(path))
+      })
+      console.log('\n')
+      process.exit(1)
+    } else {
+      updatedFiles.forEach(function (path) {
+        console.log(chalk.green(path))
+      })
+    }
+  } else {
+    console.log('Nothing.')
+  }
+
+  console.log('\n')
+  console.log('----------------')
+  console.log(' Empty files: ')
+  console.log('----------------')
+
+  if (emptyFiles.length) {
+    emptyFiles.forEach(function (path) {
       console.log(chalk.green(path))
     })
   } else {

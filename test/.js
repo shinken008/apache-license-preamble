@@ -1,3 +1,4 @@
+"use strict";
 /*
 * Licensed to the Organization under one
 * or more contributor license agreements.  See the NOTICE file

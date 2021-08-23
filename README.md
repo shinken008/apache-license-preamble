@@ -1,5 +1,5 @@
 ## apachelp
-Insert the Apache license preamble into the file. Inspired by [echarts](https://github.com/apache/echarts).
+Prepend the Apache license preamble into the file. Inspired by [echarts](https://github.com/apache/echarts).
 
 ## install
 With [npm](https://npmjs.org/) do:
@@ -14,7 +14,7 @@ yarn add apachelp -D
 ## usage
 cli
 ```sh
-apachelp --org [apache] --verbose --path [file|directory]
+apachelp --org [apache] --verbose --path [file|directory] --nosilent
 ```
 
 ## args
@@ -34,3 +34,7 @@ Assign file or directory files for insert the Apache license preamble.
 - ignore
 
 Read `process.cwd()` assign ignore file, default file is `.headerignore`.
+
+- nosilent
+
+Throw an error when exists no preamble license file.
